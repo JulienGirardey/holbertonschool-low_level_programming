@@ -14,8 +14,6 @@ int main(void)
 	long long int longlongType = 8;
 	float floatType = 8.7;
 
-	// Calculate and print
-	// the size of different type
 	printf("Size of a char: %ld byte(s)\n",
 		sizeof(charType));
 
