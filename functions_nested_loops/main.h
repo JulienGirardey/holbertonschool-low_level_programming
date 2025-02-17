@@ -1,0 +1,1 @@
+int myPutchar(void);

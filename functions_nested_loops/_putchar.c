@@ -1,11 +1,12 @@
 #include <stdio.h>
+#include "main.h"
 
 /**
- * main - Fonction main
+ * _putchar - Fonction myPutchar
  *
- * Return: 0 (Sucess)
+ * Return: 0(Sucess)
  */
-int _putchar(void)
+int myPutchar (void)
 {
 	printf("_putchar\n");
 
