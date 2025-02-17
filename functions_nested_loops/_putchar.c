@@ -6,7 +6,7 @@
  *
  * Return: 0(Sucess)
  */
-int _putchar (void)
+int _putchar(void)
 {
 	printf("_putchar\n");
 
