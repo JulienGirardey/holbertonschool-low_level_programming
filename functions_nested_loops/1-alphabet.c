@@ -3,19 +3,19 @@
 /**
  * main - prints the alphabet, in lowercase
  *
- * Return: nothing.
+ * Return: Allway 0.
  */
 void print_alphabet(void)
 {
 	int i;
 
 	i = 97;
-	while(i <= 122)
+	while (i <= 122)
 	{
 		_putchar(i);
 		i++;
 	}
 	_putchar('\n');
 
-	return ;
+	return;
 }
