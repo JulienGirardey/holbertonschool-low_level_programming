@@ -13,26 +13,46 @@ void jack_bauer(void)
 	int houre = 0;
 	int houre2 = 0;
 
-	printf("%d%d:%d%d\n", houre, houre2, min, min2);
+	_putchar('0' + houre);
+	_putchar('0' + houre2);
+	_putchar(':');
+	_putchar('0' + min);
+	_putchar('0' + min2);
+	_putchar('\n');
 	while (houre != 2 || houre2 != 3 || min != 5 || min2 != 9)
 	{
 		if (min2 < 9)
 		{
 			min2++;
-			printf("%d%d:%d%d\n", houre, houre2, min, min2);
+			_putchar('0' + houre);
+			_putchar('0' + houre2);
+			_putchar(':');
+			_putchar('0' + min);
+			_putchar('0' + min2);
+			_putchar('\n');
 		}
 		else if (min < 5)
 		{
 			min2 = 0;
 			min++;
-			printf("%d%d:%d%d\n", houre, houre2, min, min2);
+			_putchar('0' + houre);
+			_putchar('0' + houre2);
+			_putchar(':');
+			_putchar('0' + min);
+			_putchar('0' + min2);
+			_putchar('\n');
 		}
 		else if (houre2 < 9)
 		{
 			min = 0;
 			min2 = 0;
 			houre2++;
-			printf("%d%d:%d%d\n", houre, houre2, min, min2);
+			_putchar('0' + houre);
+			_putchar('0' + houre2);
+			_putchar(':');
+			_putchar('0' + min);
+			_putchar('0' + min2);
+			_putchar('\n');
 		}
 		else
 		{
@@ -40,7 +60,12 @@ void jack_bauer(void)
 			min = 0;
 			min2 = 0;
 			houre++;
-			printf("%d%d:%d%d\n", houre, houre2, min, min2);
+			_putchar('0' + houre);
+			_putchar('0' + houre2);
+			_putchar(':');
+			_putchar('0' + min);
+			_putchar('0' + min2);
+			_putchar('\n');
 		}
 	}
 }
