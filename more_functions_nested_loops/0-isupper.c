@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * -isupper - find uppercase
+ * _isupper - find uppercase
  *
  * @c: Is a character to check
  *
