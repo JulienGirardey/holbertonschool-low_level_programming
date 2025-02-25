@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+/**
+ *
+ */
+void fizzBuzz(void)
+{
+	int i = 0;
+
+	while (i <= 100)
+	{
+		printf("%d", i + '0');
+		i++;
+	}
+}
