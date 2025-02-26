@@ -13,6 +13,8 @@ void puts2(char *str)
 
 	while (str[i])
 	{
+		if (i >= 448)
+			break;
 		_putchar(str[i]);
 		i += 2;
 	}
