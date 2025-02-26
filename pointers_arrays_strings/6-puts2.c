@@ -15,6 +15,8 @@ void puts2(char *str)
 	{
 		if (str[i] == '\0')
 			break;
+		if (i == 446)
+			break;
 		_putchar(str[i]);
 		i += 2;
 	}
