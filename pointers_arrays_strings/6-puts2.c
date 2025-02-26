@@ -11,7 +11,7 @@ void puts2(char *str)
 {
 	int i = 0;
 
-	while (str[i])
+	while (str[i] - 1)
 	{
 		if (i > 446)
 			break;
