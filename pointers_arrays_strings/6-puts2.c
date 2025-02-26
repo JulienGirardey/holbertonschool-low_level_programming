@@ -11,9 +11,9 @@ void puts2(char *str)
 {
 	int i = 0;
 
-	while (str[i] - 1)
+	while (str[i])
 	{
-		if (i > 446)
+		if (str[i] == '\0')
 			break;
 		_putchar(str[i]);
 		i += 2;
