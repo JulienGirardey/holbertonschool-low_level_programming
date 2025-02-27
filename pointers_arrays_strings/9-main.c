@@ -12,7 +12,7 @@ int main(void)
 
 	char *ptr;
 
-	ptr = _strcpy(s1, "Z\n");
+	ptr = _strcpy(s1, "Holberton!\n");
 	printf("%s", s1);
 	printf("%s", ptr);
 	return (0);
