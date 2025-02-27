@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+#include <string.h>
 
 /**
 * main - check the code
@@ -12,7 +13,11 @@ int main(void)
 
 	char *ptr;
 
-	ptr = _strcpy(s1, "Holberton!\n");
+	ptr = _strcpy(s1, "Z\n");
+	printf("%s", s1);
+	printf("%s", ptr);
+	printf("je suis ici\n");
+	ptr = strcpy(s1, "Z\n");
 	printf("%s", s1);
 	printf("%s", ptr);
 	return (0);
