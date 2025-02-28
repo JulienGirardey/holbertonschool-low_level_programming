@@ -18,6 +18,11 @@ int _atoi(char *s)
 
 	while (s[i])
 	{
+		if (num == INT_MAX && s[i] >= '0' && s[i] <= '9')
+		{
+			num = INT_MIN;
+			break;
+		}
 		if (s[i] == '-')
 			negatif++;
 		if (s[i] >= '0' && s[i] <= '9')
