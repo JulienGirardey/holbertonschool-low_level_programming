@@ -8,7 +8,7 @@
 */
 int main(void)
 {
-	char s[] = "Expect the best. Prepare for the worst. Capitalize on what comes.\n";
+	char s[] = "TALK IS CHEAP. SHOW ME THE CODE.\n";
 
 	char *p;
 

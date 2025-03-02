@@ -15,7 +15,7 @@ char *leet(char *str)
 
 	lookup['a'] = lookup['A'] = '4';
 	lookup['e'] = lookup['E'] = '3';
-	lookup['o'] = lookup['0'] = '0';
+	lookup['o'] = lookup['O'] = '0';
 	lookup['t'] = lookup['T'] = '7';
 	lookup['l'] = lookup['L'] = '1';
 	while (str[i])
