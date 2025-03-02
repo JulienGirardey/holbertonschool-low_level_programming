@@ -11,18 +11,19 @@ char *leet(char *str)
 {
 	int i = 0;
 
+	char lookup[128] = {0};
+
+	lookup['a'] = lookup['A'] = '4';
+	lookup['e'] = lookup['E'] = '3';
+	lookup['o'] = lookup['0'] = '0';
+	lookup['t'] = lookup['T'] = '7';
+	lookup['l'] = lookup['L'] = '1';
 	while (str[i])
 	{
-		if (str[i] == 'a' || str[i] == 'A')
-			str[i] = '4';
-		else if (str[i] == 'e' || str[i] == 'E')
-			str[i] = '3';
-		else if (str[i] == 'o' || str[i] == 'O')
-			str[i] = '0';
-		else if (str[i] == 't' || str[i] == 'T')
-			str[i] = '7';
-		else if (str[i] == 'l' || str[i] == 'L')
-			str[i] = '1';
+		if (lookup[(unsigned char)str[i]])
+
+			str[i] = lookup[(unsigned char)str[i]];
+
 		i++;
 	}
 	return (str);
