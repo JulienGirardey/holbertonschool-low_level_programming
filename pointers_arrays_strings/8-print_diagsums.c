@@ -21,8 +21,7 @@ void print_diagsums(int *a, int size)
 
 	while (i < size && j < size)
 	{
-		if (j == i)
-		    diag1 += a[i * size + j];
+		diag1 += a[i * size + j];
 		j++;
 		i++;
 	}
