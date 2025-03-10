@@ -16,8 +16,10 @@ char *_strdup(char *str)
 
 	int i = 0;
 
-	int size = (strlen(str) + 1);
+	int size = 0;
 
+	while (str[size])
+		size++;
 	if (str == NULL)
 		return (NULL);
 	sentence = malloc(size * sizeof(char));
