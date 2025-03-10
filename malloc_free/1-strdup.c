@@ -15,6 +15,7 @@ char *_strdup(char *str)
 	char *sentence;
 
 	int i = 0;
+
 	int size = (strlen(str) + 1);
 
 	if (str == NULL)
