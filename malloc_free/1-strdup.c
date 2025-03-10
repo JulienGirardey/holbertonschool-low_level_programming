@@ -18,11 +18,11 @@ char *_strdup(char *str)
 
 	int size = 0;
 
+	if (str == NULL)
+		return (NULL);
 	while (str[size])
 		size++;
-	if (str == NULL || *str == '\0')
-		return (NULL);
-	sentence = malloc(size * sizeof(char));
+	sentence = malloc((size + 1) * sizeof(char));
 	if (sentence == NULL)
 		return (NULL);
 	while (i < size)
@@ -30,5 +30,6 @@ char *_strdup(char *str)
 		sentence[i] = str[i];
 		i++;
 	}
+	sentence[size] = '\0';
 	return (sentence);
 }
