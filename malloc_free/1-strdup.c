@@ -21,6 +21,8 @@ char *_strdup(char *str)
 	if (str == NULL)
 		return (NULL);
 	sentence = malloc(size * sizeof(char));
+	if (sentence == NULL)
+		return (NULL);
 	while (i < size)
 	{
 		sentence[i] = str[i];
