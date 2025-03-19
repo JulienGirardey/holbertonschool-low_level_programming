@@ -5,55 +5,52 @@
 /**
 * print_char - function use to print a char.
 *
-* @args: Character to print.
+* @arg: Character to print.
 *
 * Return: Always void.
 */
-void print_char(va_list *args)
+void print_char(va_list arg)
 {
-	printf("%c", va_arg(*args, int));
+	printf("%c", va_arg(arg, int));
 }
 
 /**
 * print_int - function use to print a int.
 *
-* @args: int to print.
+* @arg: int to print.
 *
 * Return: Always void.
 */
-void print_int(va_list *args)
+void print_int(va_list arg)
 {
-	printf("%d", va_arg(*args, int));
+	printf("%d", va_arg(arg, int));
 }
 
 /**
 * print_float - function use to print a float.
 *
-* @args: Double to print.
+* @arg: Double to print.
 *
 * Return: Always void.
 */
-void print_float(va_list *args)
+void print_float(va_list arg)
 {
-	printf("%f", va_arg(*args, double));
+	printf("%f", va_arg(arg, double));
 }
 
 /**
 * print_string - function use to print a string.
 *
-* @args: string to print.
+* @arg: string to print.
 *
 * Return: Always void.
 */
-void print_string(va_list *args)
+void print_string(va_list arg)
 {
-	char *s = va_arg(*args, char *);
+	char *s = va_arg(arg, char *);
 
 	if (s == NULL)
-	{
-		printf("(nil)");
-		return;
-	}
+		s = "(nil)";
 	printf("%s", s);
 }
 
@@ -66,32 +63,29 @@ void print_string(va_list *args)
 */
 void print_all(const char * const format, ...)
 {
+	va_list args;
 	int i = 0, j;
 
 	const char *separator = "";
 
 	f_t types[] = {
-		{'c', print_char},
-		{'i', print_int},
-		{'f', print_float},
-		{'s', print_string},
-		{'\0', NULL}
+		{"c", print_char},
+		{"i", print_int},
+		{"f", print_float},
+		{"s", print_string},
+		{NULL, NULL}
 	};
 
-	va_list args;
-
 	va_start(args, format);
-	if (format == NULL)
-		return;
-	while (format[i] != '\0')
+	while (format && format[i])
 	{
 		j = 0;
-		while (types[j].type)
+		while (j < 4)
 		{
-			if (types[j].type == format[i])
+			if (format[i] == *types[j].type)
 			{
 				printf("%s", separator);
-				types[j].print(&args);
+				types[j].print(args);
 				separator = ", ";
 				break;
 			}

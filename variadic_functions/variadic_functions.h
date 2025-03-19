@@ -18,9 +18,14 @@ void print_all(const char * const format, ...);
 */
 typedef struct format_types
 {
-	char type;
+	char *type;
 
-	void (*print)(va_list *);
+	void (*print)(va_list);
 } f_t;
+
+void print_char(va_list args);
+void print_int(va_list args);
+void print_float(va_list args);
+void print_string(va_list args);
 
 #endif
