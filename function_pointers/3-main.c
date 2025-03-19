@@ -29,15 +29,7 @@ int main(int argc, char *argv[])
 	if (op.f == NULL)
 	{
 		printf("Error\n");
-		return (99);
-	}
-	if (strcmp(argv[2], "%") || strcmp(argv[2], "/"))
-	{
-		if (a == 0 || b == 0)
-		{
-			printf("Error\n");
-			return (100);
-		}
+		exit(99);
 	}
 	result = op.f(a, b);
 	printf("%d\n", result);
