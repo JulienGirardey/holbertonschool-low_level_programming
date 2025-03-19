@@ -14,9 +14,9 @@
 */
 int main(int argc, char *argv[])
 {
-	int a, b, result;
+	int a, b;
 
-	op_t op;
+	int (*op_func)(int, int);
 
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
@@ -25,13 +25,12 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (98);
 	}
-	op.f = get_op_func(argv[2]);
-	if (op.f == NULL)
+	op_func = get_op_func(argv[2]);
+	if (op_func == NULL)
 	{
 		printf("Error\n");
 		exit(99);
 	}
-	result = op.f(a, b);
-	printf("%d\n", result);
+	printf("%d\n", op_func(a, b));
 	return (0);
 }
