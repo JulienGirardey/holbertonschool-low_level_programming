@@ -8,7 +8,7 @@
 * @head: list with new value
 * @str: string to add
 *
-* Return: new list
+* Return: address of new element, or NULL if it failed
 */
 list_t *add_node(list_t **head, const char *str)
 {
@@ -33,5 +33,5 @@ list_t *add_node(list_t **head, const char *str)
 	new->next = (*head);
 	(*head) = new;
 
-	return (new->next);
+	return (new);
 }
