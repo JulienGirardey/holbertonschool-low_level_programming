@@ -1,5 +1,6 @@
 #include "lists.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
 * get_dnodeint_at_index - that returns the nth node of a linked list
@@ -27,7 +28,10 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 	for (i = 1; i != index; i++)
 	{
 		if (new == NULL)
+		{
+			printf("Error\n");
 			return (NULL);
+		}
 		new = new->next;
 	}
 
