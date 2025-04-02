@@ -12,28 +12,15 @@
 */
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
-	unsigned int i;
+	unsigned int i = 0;
 
-	dlistint_t *new;
+	dlistint_t *current = head;
 
-	if (index == 0)
-		return (head);
-
-	new = malloc(sizeof(dlistint_t));
-	if (new == NULL)
-		return (NULL);
-
-	new = head->next;
-
-	for (i = 1; i != index; i++)
+	while (current != NULL && i < index)
 	{
-		if (new == NULL)
-		{
-			printf("Error\n");
-			return (NULL);
-		}
-		new = new->next;
+		current = current->next;
+		i++;
 	}
 
-	return (new);
+	return (current);
 }
