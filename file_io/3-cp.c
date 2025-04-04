@@ -5,9 +5,9 @@
 #include <stdlib.h>
 
 /**
- * close_checked - Safely closes a file descriptor
- * @fd: File descriptor
- */
+* close_checked - Safely closes a file descriptor
+* @fd: File descriptor
+*/
 void close_checked(int fd)
 {
 	if (close(fd) == -1)
@@ -18,14 +18,15 @@ void close_checked(int fd)
 }
 
 /**
- * main - Copies content from file_from to file_to
- * @ac: Argument count
- * @av: Argument vector
- * Return: 0 on success, exits with codes 97-100 on error
- */
+* main - Copies content from file_from to file_to
+* @ac: Argument count
+* @av: Argument vector
+* Return: 0 on success, exits with codes 97-100 on error
+*/
 int main(int ac, char **av)
 {
 	int fd_from, fd_to;
+
 	ssize_t r_bytes, w_bytes;
 	char buffer[1024];
 
