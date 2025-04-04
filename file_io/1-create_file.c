@@ -1,6 +1,5 @@
 #include "main.h"
 #include <fcntl.h>
-#include <string.h>
 
 /**
 * create_file - that creates a file
@@ -12,7 +11,7 @@
 */
 int create_file(const char *filename, char *text_content)
 {
-	int fd;
+	int fd, i = 0;
 
 	ssize_t bytesWritten;
 
@@ -29,7 +28,10 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 	}
 
-	bytesWritten = write(fd, text_content, strlen(text_content));
+	while (text_content[i])
+		i++;
+
+	bytesWritten = write(fd, text_content, i);
 
 	if (bytesWritten == -1)
 	{
